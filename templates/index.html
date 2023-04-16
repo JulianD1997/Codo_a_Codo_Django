@@ -1,14 +1,18 @@
-{% extends 'layouts/base.html' %} 
+{% extends 'layouts/fathers/base.html' %} 
 
 {% block 'title' %}Inicio{% endblock %} 
 
 {% block 'styles' %} 
-
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/index/carousel_style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/trailer_style.css' %}" />
 {% endblock %}  
 
 {% block 'content' %}
-    <p>Inicio</p>
+    {% include 'layouts/partials/index/carousel.html' %}
+    {% include 'layouts/partials/index/trailer.html' %}
 {% endblock %} 
 {% block 'scripts' %}
-
+<script src="{% static 'js/index/carousel.js' %}"></script>
+<script src="{% static 'js/play_trailer.js' %}"></script>
 {% endblock %}

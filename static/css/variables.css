@@ -53,8 +53,6 @@ ul {
 .main {
   display: flex;
   flex-direction: column;
-}
-section:first-child{
-  margin-top: calc(1.5rem + 54px);
+  align-items: center;
 }
 /* end global style */
