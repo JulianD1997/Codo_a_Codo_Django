@@ -6,13 +6,20 @@
     {% load static%}
     <link rel="stylesheet" href="{% static 'css/index/carousel_style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/trailer_style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index/trending_style.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/slider_style.css' %}" />
 {% endblock %}  
 
 {% block 'content' %}
     {% include 'layouts/partials/index/carousel.html' %}
     {% include 'layouts/partials/index/trailer.html' %}
+    {% include 'layouts/partials/index/trending.html' %}
+    {% include 'layouts/partials/index/upcoming.html' %}
 {% endblock %} 
 {% block 'scripts' %}
 <script src="{% static 'js/index/carousel.js' %}"></script>
 <script src="{% static 'js/play_trailer.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static 'js/index/queries_movie.js' %}"></script>
 {% endblock %}

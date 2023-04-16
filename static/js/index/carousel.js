@@ -1,8 +1,8 @@
 //--------------------Carrusel--------------------
 
 const carousel = document.querySelector('.carousel__container')
-const leftButton = document.querySelector('.move__button.left')
-const rightButton = document.querySelector('.move__button.right')
+const carouselLeftButton = document.querySelector('.move__button.left')
+const CarouselRightButton = document.querySelector('.move__button.right')
 
 // variables
 //todas las tarjetas
@@ -39,8 +39,8 @@ function moveCardsPrev() {
 }
 
 // Agrega listeners a los botones para mover las tarjetas
-rightButton.addEventListener('click',moveCardsNext)
-leftButton.addEventListener('click',moveCardsPrev)
+CarouselRightButton.addEventListener('click',moveCardsNext)
+carouselLeftButton.addEventListener('click',moveCardsPrev)
 
 // Funciones para el slider automático
 const autoSlider = () => interval = setInterval(moveCardsNext,15000)
