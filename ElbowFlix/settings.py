@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "fontawesomefree",
-    'API_TMDB'
+    'API_TMDB',
+    'users',
 ]
 
 MIDDLEWARE = [

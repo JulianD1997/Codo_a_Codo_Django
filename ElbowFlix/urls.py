@@ -9,5 +9,6 @@ from .views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('',include('API_TMDB.urls'))
+    path('',include('API_TMDB.urls')),
+    path('',include('users.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
