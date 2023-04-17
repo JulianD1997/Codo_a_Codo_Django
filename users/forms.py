@@ -23,3 +23,11 @@ class UserForm(ModelForm):
             'email' : EmailInput(attrs={'class':'form__input'}),
             'password': PasswordInput(attrs={'class':'form__input'})
         }
+        error_messages = {
+            'user': {
+                'unique': 'Este nombre de usuario ya existe. Por favor, elige otro.',
+            },
+            'email': {
+                'unique': 'Este correo ya está registrado en nuestro sistema. Por favor, utiliza otro correo.',
+            },
+        }

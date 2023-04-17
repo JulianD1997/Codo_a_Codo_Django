@@ -1,18 +1,89 @@
 {% extends 'layouts/fathers/base.html' %}
 
-{% block 'title' %}Registro{% endblock %} 
+{% block 'title' %}Registrarse{% endblock %} 
 {% block 'styles' %} 
     {% load static%}
+    <link rel="stylesheet" href="{% static 'css/users/register_style.css' %}" />
 {% endblock %}
 {% block 'content' %}
-    <section class='register'>
-        <form action="POST">
+    <section class="main__login">
+        <h3 class="main__title">Registrarse</h3>
+        <div class='main__login-container'>
+            <button class="login__button">
+                <picture><img src="https://storage.googleapis.com/support-kms-prod/ZAl1gIwyUsvfwxoW9ns47iJFioHXODBbIkrK"
+                        alt="logo_google"></picture>
+                <span class="span__login">Acceder con google</span>
+            <button class="twitter__button">
+                <img src="https://cdn-icons-png.flaticon.com/512/39/39552.png" alt="logo_twitter">
+            </button>
+        </div>
+    </section>
+    <hr class="main__divider">
+    <section class="main__registrer">
+        <form action="{% url 'register' %}" class='main__form' method="POST">
             {% csrf_token %}
-            
-            {{form.as_div}}
-            <input type="submit" value='crear'>
+            <div class="form__container-user">
+                <div class="form__container">
+                    {{form.name.label_tag}}
+                    {{form.name}}
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <span class="form__span">No debe llevar números ni símbolos</span>
+                </div>
+                <div class="form__container">
+                    {{form.last_name.label_tag}}
+                    {{form.last_name}}
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <span class="form__span">No debe llevar números ni símbolos</span>
+                </div>
+            </div>
+            <div class="form__container-user">
+                <div class="form__container">
+                    {{form.user.label_tag}}
+                    {{form.user}}
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <span class="form__span">entre 4 a 16 caracteres</span>
+                    {% if form.errors %}
+                        {{form.errors.user}}
+                    {% endif %}
+                </div>
+                <div class="form__container">
+                    {{form.password.label_tag}}
+                    {{form.password}}
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+            </div>
+            <div class='span__info'>
+                <span class="span-password">
+                    <i class="fa-regular fa-circle-info fa-lg"></i>
+                    La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, 
+                    al menos una minúscula, al menos una mayúscula y al menos un caracter
+                </span>
+            </div>
+            <div class="form__container">
+                {{form.email.label_tag}}
+                {{form.email}}
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-xmark"></i>
+                <span class="form__span">Correo incorrecto</span>
+                {% if form.errors %}
+                {{form.errors.email}}   
+                {% endif %}
+            </div>
+            <div class="form__container-checkbox">
+                <div>
+                    <input type="checkbox" id="form__checkbox" class="form__checkbox" name="checkbox">
+                    <label for="form__checkbox" class='form__checkbox-label'><a href='#'>Términos de servicio y política de privacidad</a></label>
+                </div>
+                <span class="form__span">Aceptar las condiciones</span>
+            </div>
+            <button type="submit" class="form__button">Crear cuenta</button>
         </form>
     </section>
 {% endblock %}
 {% block 'scripts' %}
+<script src="{% static 'js/users/forms.js' %}"></script>
 {% endblock %}

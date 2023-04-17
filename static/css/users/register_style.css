@@ -1,0 +1,252 @@
+button{
+    cursor: pointer;
+}
+/* centrar los objetos */
+.main__login{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.main__title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.main__login-container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+/*estilo botones de logueo*/
+
+.login__button{
+    padding: 0 10px 0 5px;
+    height: 40px;
+    min-width: 200px;
+    background-color: rgb(26,115,232);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.login__button picture{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: var(--text-color);
+}
+.login__button picture img{
+    height: 95%
+}
+.login__button span{
+    color: var(--text-color);
+    font-size: 1.3em;
+    font-weight: 500;
+}
+.twitter__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(242,242,242);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+.twitter__button img{
+    height: 80%;
+    opacity: 0.7;
+}
+
+.main button{
+    transition: opacity 0.3s;
+}
+.main button:hover{
+    opacity: 0.8;
+    box-shadow: 0px 0px 3px 2px rgba(228, 228, 228, 0.544);
+}
+
+/* linea divisioria botones de logueo formulario */
+
+.main__divider{
+    width: 90%;
+    margin: 10px;
+    overflow: visible;
+    border:none;
+    border-top: 1px solid rgb(112, 112, 112);
+    color: rgba(255, 255, 255, 0.445);
+    text-align: center;
+}
+/* O centrado  */
+.main__divider:after{
+    content: "Ó";
+    display: inline-block;
+    position: relative;
+    top:-12px;
+    padding: 0 10px;
+    background-color: var(--secondary-color);
+}
+/* posicion del formulario de registro */
+.main__registrer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.main__form{
+    padding: 1rem;
+    width: 100vw;
+}
+.form__container{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.form__container>.fa-solid,.form__container>span,.form__container-checkbox>span{
+    display: none;
+}
+.span__login{
+    display: block;
+}
+.form__container > label{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.form__input{
+    border-radius: 10px;
+    height: 45px;
+    border: 1px solid transparent;
+    background-color: rgb(33, 33, 33);
+    color: var(--text-color);
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+.form__input:is(:hover,:focus,:active){
+    background-color: rgb(69, 64, 69);
+    color: white;
+    box-shadow: 
+        0 0 5px 2px rgb(234,76,137),
+        0 0 3px rgba(255, 255, 255, 0.526);
+}
+.form__container-checkbox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    
+}
+.form__container-checkbox>div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.form__checkbox{
+    width: 17px;
+    height: 17px;
+}
+.form__checkbox-label{
+    font-size: 1rem;
+    color: var(--text-color);
+}
+.form__checkbox-label >a{
+    color: var(--text-color);
+    text-transform: capitalize;
+    text-decoration: underline;
+    line-height: 1rem;
+}
+.form__button{
+    width: 50%;
+    height: 45px;
+    background-color: rgb(234,76,137);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    border:none;
+    border-radius: 10px;
+}
+.form__span{
+    color: rgb(133, 11, 11);
+}
+.span__info{
+    margin-bottom: 1rem;
+}
+.span-password{
+    font-size: 0.9rem;
+}
+.span-password>i{
+    color: var(--tertiary-color);
+    margin-right: 0.6rem;
+}
+.correct{
+    position: relative;
+}
+.correct > .fa-circle-check{
+    display: block;
+    color: rgb(30, 255, 0);
+    position: absolute;
+    top: 50px;
+    left: 90%;
+}
+.incorrect{
+    position: relative;
+}
+.incorrect > .fa-circle-xmark{
+    display: block;
+    color: rgb(255, 0, 0);
+    position: absolute;
+    top: 50px;
+    left: 90%;
+}
+.incorrect > .form__span{
+    display: block;
+}
+.incorrect > div .form__span{
+    display: block;
+}
+
+.errorlist{
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--accent-color)
+}
+@media (min-width: 950px){
+    .main__form{
+        
+        padding: 1rem;
+        width: 50%;
+    }
+    .form__container-user{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .form__container{
+        width: 100%;
+    }
+    .main{
+        height: 90vh;
+    }
+    .correct.dos > .fa-circle-check{
+        left: 95%;
+    }
+    .correct:nth-child(3) > .fa-circle-check{
+        left: 95%;
+    }
+    .incorrect.dos > .fa-circle-xmark{
+        left: 95%;
+    }
+    .incorrect:nth-child(3) > .fa-circle-xmark{
+        left: 95%;
+    }
+}

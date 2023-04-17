@@ -10,6 +10,7 @@
   --tertiary-color: rgb(255, 191, 0);
   --accent-color: rgb(186, 31, 36);
   --accent-light-color: rgba(186, 31, 36, 0.9);
+  --success-color: rgb(75,181,67);
   --black-color: rgb(0, 0, 0);
   --text-color: rgb(255, 255, 255);
   --hover-text-color: rgb(205, 205, 205);
@@ -54,5 +55,40 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+section:first-child{
+  margin-top: calc(1.5rem + 54px);
+}
+.alert{
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert__container{
+  position: relative;
+  font-size: 1.1rem;
+  padding: 5% 8%;
+  background-color: black;
+  border-radius: 20px;
+  color: var(--success-color);
+}
+.alert__close{
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+.alert.no_active{
+  display: None;
 }
 /* end global style */

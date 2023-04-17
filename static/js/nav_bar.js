@@ -1,5 +1,7 @@
 const burger = document.querySelector('#burger');
 const navMenu = document.querySelector('.nav__menu');
+const alert = document.querySelector('.alert')
+const closeAlert = document.querySelector('.alert__close')
 
 burger.addEventListener('click', () => {
   // toggle the 'active' class on both the burger and the nav menu
@@ -18,4 +20,8 @@ document.querySelectorAll('.nav__link').forEach(n =>
         burger.classList.remove('active');
         navMenu.classList.remove('active');
     })
+)
+closeAlert.addEventListener('click',()=>{
+  alert.classList.add('no_active')
+}
 )
