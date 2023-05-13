@@ -13,7 +13,7 @@ def register(request):
             user.set_password(form.cleaned_data['password'])
             user.save()
             messages.success(request,'¡Usuario creado con éxito!')
-            return redirect('index')
+            return redirect('login')
         context={'form':form,
                  'errors':form.errors} 
         return render(request,'users/register.html',context)

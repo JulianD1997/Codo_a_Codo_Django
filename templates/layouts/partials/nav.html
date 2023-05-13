@@ -11,11 +11,14 @@
             <a href="#" class="nav__link"><i class="fa-solid fa-tv"></i><span>Series</span></a>
         </li>
         <li class="nav__item">
+            <a href="{% url 'logout' %}" class="nav__link"><i class="fa-solid fa-right-from-bracket"></i><span>Cerrar sesión</span></a>
+        </li>
+        {% comment %} <li class="nav__item">
             <a href="{% url 'register' %}" class="nav__link"><i class="fa-solid fa-clipboard"></i><span>Registrarse</span></a>
         </li>
         <li class="nav__item">
             <a href="{% url 'login' %}" class="nav__link"><i class="fa-solid fa-user"></i><span>Iniciar sesión</span></a>
-        </li>
+        </li> {% endcomment %}
     </ul>
     <div class="burger" id="burger">
         <span class="bar"></span>

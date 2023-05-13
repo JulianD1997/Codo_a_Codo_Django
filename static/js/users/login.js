@@ -1,38 +1,33 @@
-function validarInputs(input) {
+const alert = document.querySelector('.alert')
+const closeAlert = document.querySelector('.alert__close')
+//formulario
+function validateInput(input) {
     switch (input.target.name) {
-        case 'name':
+        case 'username':
             if (input.target.value.length > 0) {
-                document.getElementsByClassName('form__label')[0].classList.add('oculto')
+                document.getElementsByClassName('form__label')[0].classList.add('oculte')
             } else {
-                document.getElementsByClassName('form__label')[0].classList.remove('oculto')
+                document.getElementsByClassName('form__label')[0].classList.remove('oculte')
             }
             break;
-        case 'email':
+        case 'password':
             if (input.target.value.length > 0) {
-                document.getElementsByClassName('form__label')[1].classList.add('oculto')
+                document.getElementsByClassName('form__label')[1].classList.add('oculte')
             } else {
-                document.getElementsByClassName('form__label')[1].classList.remove('oculto')
-            }
-            break;
-        case 'subject':
-            if (input.target.value.length > 0) {
-                document.getElementsByClassName('form__label')[2].classList.add('oculto')
-            } else {
-                document.getElementsByClassName('form__label')[2].classList.remove('oculto')
-            }
-            break;
-        case 'text__area':
-            if (input.target.value.length > 0) {
-                document.getElementsByClassName('form__label')[3].classList.add('oculto')
-            } else {
-                document.getElementsByClassName('form__label')[3].classList.remove('oculto')
+                document.getElementsByClassName('form__label')[1].classList.remove('oculte')
             }
             break;
     }
 }
-
-const formulario = document.getElementById('form')
+const form = document.getElementsByClassName('form__login')
 const inputs = document.querySelectorAll('.form__input')
 inputs.forEach(input => {
-    input.addEventListener('blur', validarInputs)
+    input.addEventListener('blur', validateInput)
 })
+
+if (closeAlert){
+    closeAlert.addEventListener('click',()=>{
+      alert.classList.add('no_active')
+    }
+    )
+  }

@@ -2,7 +2,9 @@ import json
 
 from django.shortcuts import redirect, render
 from API_TMDB.views import movies_json
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def index(request):
     """
     Renderiza la página principal con una lista de películas.

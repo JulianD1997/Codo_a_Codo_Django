@@ -1,4 +1,9 @@
 @import url(../variables.css);
+
+section{
+    margin: 1rem;
+}
+
 button{
     cursor: pointer;
 }
