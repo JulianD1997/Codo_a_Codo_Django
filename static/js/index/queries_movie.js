@@ -5,14 +5,9 @@ const sliderRightButton = document.querySelector('.slider__button.right')
 const sliderLeftButton = document.querySelector('.slider__button.left')
 const trendingButton = document.querySelector('.trending__switch')
 
-
-trendingButton.addEventListener('click', () => {
-    trendingButton.classList.toggle('active')
-
-})
-
-async function getTrendingMovies() {
-    const response = await fetch('./movie/?resource=trending/movie&type_=day')
+async function getTrendingMovies(type='week') {
+    const response = await fetch(`./movie/?resource=trending/movie&type_=${type}`)
+    swiperTrending.innerHTML = ``
     const data = await response.json()
     data.forEach((movie) => {
     swiperTrending.innerHTML += `
@@ -54,3 +49,8 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+trendingButton.addEventListener('click', () => {
+  trendingButton.classList.toggle('active')
+  getTrendingMovies(type='day')
+})

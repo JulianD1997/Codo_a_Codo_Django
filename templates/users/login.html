@@ -1,0 +1,28 @@
+{% extends 'layouts/fathers/base.html' %}
+
+{% block 'title' %}login{% endblock %} 
+{% block 'styles' %} 
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/users/login_style.css' %}" />
+{% endblock %}
+{% block 'content' %}
+    <section class='section login'>
+        <h2>Iniciar sesión</h2>
+        <div class="section__poster">
+        </div>
+        <form class="form__login" method="post">
+            {% csrf_token %}
+            <div class='form__group'>
+                <label for="id_password">Email</label>
+                {{form.username}}
+            </div>
+            <div class='form__group'>
+                <label for="id_password">Contraseña</label>
+                {{form.password}}
+            </div>
+            <button class='button__login' type="submit">Iniciar sesión</button>
+        </form>
+    </section>
+{% endblock %}
+{% block 'scripts' %}
+{% endblock %}
