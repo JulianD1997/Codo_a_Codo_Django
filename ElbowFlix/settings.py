@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     "fontawesomefree",
     'API_TMDB',
     'users',
+    'cinema',
+    'administration',
 ]
 
 MIDDLEWARE = [
@@ -85,7 +87,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "ElbowFlix",
-        "USER": config("user_db"),
+        "USER":config("user_db"),
         "PASSWORD": config("password_db"),
         "HOST": "127.0.0.1",
         "PORT": "5432",
