@@ -1,0 +1,90 @@
+
+    /* Estilo para el contenedor principal */
+    h1{
+        font-size: 50px;
+        font-style: italic;
+        align-items: center;
+    }
+    div {
+        margin-left: 5%;
+        padding: 0%;
+        
+    }
+    .img{
+        width: 25%;
+        height: 20%;
+        margin-bottom: 5%;
+    }
+    
+    /* Estilo para la lista de películas */
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* Estilo para cada elemento de la lista */
+    li {
+        margin-top: 20px;
+        padding: 10px;
+       
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Estilo para el título de la película */
+    h2 {
+        font-size: 45px;
+        color: #f4ecec;
+        margin-bottom: 2%;
+        margin-left: 15%;
+    }
+    
+    /* Estilo para la imagen de la película */
+    img {
+        width: 300px;
+        height: auto;
+        margin-top: 25px;
+      
+    }
+    
+    /* Estilo para la descripción de la película */
+    p {
+        font-size: 14px;
+        color: #f2e6e6;
+        margin:315px;
+        margin-top: -429px;
+    }
+    
+    /* Estilo para la fecha de lanzamiento de la película */
+    p:last-child {
+        
+        margin-top: -300px;
+        font-style: italic;
+    }
+
+    .genre{
+        margin-top: -90px;
+    }
+
+    button{
+        background-color: #4CAF50;
+        color: white;
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 100px;
+        border: none;
+        border-radius: 9px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 1%;
+      }
+      
+      .boton:hover {
+        background-color: #45a049;
+      }
+      
+
+
+
+
+
