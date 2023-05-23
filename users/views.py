@@ -3,7 +3,6 @@ from django.shortcuts import redirect, render
 
 from .forms import UserForm
 from .models import User
-
 # Create your views here.
 
 def register(request):
@@ -14,7 +13,7 @@ def register(request):
             user.set_password(form.cleaned_data['password'])
             user.save()
             messages.success(request,'¡Usuario creado con éxito!')
-            return redirect('index')
+            return redirect('login')
         context={'form':form,
                  'errors':form.errors} 
         return render(request,'users/register.html',context)

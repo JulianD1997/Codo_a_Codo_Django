@@ -98,3 +98,4 @@ def movies_json(request):
         print(e)
         movies = {"Error": "No found"}
     return JsonResponse(movies, safe=False)
+
