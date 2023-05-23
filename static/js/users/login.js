@@ -5,16 +5,16 @@ function validateInput(input) {
     switch (input.target.name) {
         case 'username':
             if (input.target.value.length > 0) {
-                document.getElementsByClassName('form__label')[0].classList.add('oculte')
+                document.getElementsByClassName('form__label')[0].classList.add('hide')
             } else {
-                document.getElementsByClassName('form__label')[0].classList.remove('oculte')
+                document.getElementsByClassName('form__label')[0].classList.remove('hide')
             }
             break;
         case 'password':
             if (input.target.value.length > 0) {
-                document.getElementsByClassName('form__label')[1].classList.add('oculte')
+                document.getElementsByClassName('form__label')[1].classList.add('hide')
             } else {
-                document.getElementsByClassName('form__label')[1].classList.remove('oculte')
+                document.getElementsByClassName('form__label')[1].classList.remove('hide')
             }
             break;
     }

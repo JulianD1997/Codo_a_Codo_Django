@@ -1,9 +1,24 @@
 @import url(../variables.css);
 
+.article {
+    position: relative;
+    overflow: hidden;
+    width:  min(100%,90ch);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(28, 28, 28);
+    box-shadow:
+        -6px 6px 12px rgb(16, 16, 16),
+        6px -6px 12px rgb(40, 40, 40);
+    border-radius: 25px;
+    border: 1rem solid transparent;
+}
 
 .section.login{
     width: 90%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -19,7 +34,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 100%;
+    width: 100%;
 }
 
 .form__group {
@@ -69,7 +84,14 @@
         -6px -6px 12px #282828;
 }
 
-.oculte {
+.hide {
     color: var(--text-color);
     transform: translate(-15px, -32px) scale(.8);
+}
+
+.link__register{
+    margin: 5px 0px 10px;
+    color: var(--text-color);
+    text-decoration: underline;
+    font-size: 1rem;
 }

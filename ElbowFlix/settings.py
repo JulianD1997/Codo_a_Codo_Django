@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "fontawesomefree",
     'API_TMDB',
     'users',
+    'search_movie'
 ]
 
 MIDDLEWARE = [

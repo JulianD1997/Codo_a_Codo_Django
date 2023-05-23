@@ -1,30 +1,36 @@
-{% extends 'layouts/fathers/base_user.html' %}
-
+{% extends 'layouts/fathers/base_user.html' %} 
 {% block 'title' %}login{% endblock %} 
 {% block 'styles' %} 
-    {% load static%}
-    <link rel="stylesheet" href="{% static 'css/users/login_style.css' %}" />
-{% endblock %}
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/users/login_style.css' %}" />
+{% endblock %} 
 {% block 'content' %}
-    <section class='section login'>
-        <h2 class='title'>Iniciar sesión</h2>
-        <div class="section__poster">
-        </div>
-        <form class="form__login" method="post" autocomplete='off'>
-            {% csrf_token %}
-            <div class='form__group'>
-                <input type="text" name="{{ form.username.name }}" id="id_username" class="form__input">
-                <label class="form__label" for="id_username" class>Email</label>
-            </div>
-            <div class='form__group'>
-                <input type="password" name="{{ form.password.name }}" id="id_password" class="form__input" auto>
-                <label class="form__label" for="id_password">Contraseña</label>
-            </div>
-            <a href="{% url 'register' %}">registrarse</a>
-            <button class='form__input button' type="submit">Iniciar sesión</button>
-        </form>
+    <section class="section login">
+        <article class='article'>
+            <h2 class="title">Iniciar sesión</h2>
+            <div class="section__poster"></div>
+            <form class="form__login" method="post" autocomplete="off">
+                {% csrf_token %}
+                <div class="form__group">
+                    <input type="text" name="{{ form.username.name }}" id="id_username" class="form__input" />
+                    <label class="form__label" for="id_username" class>Email</label>
+                </div>
+                <div class="form__group">
+                    <input
+                        type="password"
+                        name="{{ form.password.name }}"
+                        id="id_password"
+                        class="form__input"
+                        auto
+                    />
+                    <label class="form__label" for="id_password">Contraseña</label>
+                </div>
+                <button class="form__input button" type="submit">Iniciar sesión</button>
+            </form>
+            <a class='link__register' href="{% url 'register' %}">registrarse</a>
+        </article>
     </section>
-{% endblock %}
+{% endblock %} 
 {% block 'scripts' %}
-    <script src="{% static 'js/users/login.js' %}"></script>
+<script src="{% static 'js/users/login.js' %}"></script>
 {% endblock %}
