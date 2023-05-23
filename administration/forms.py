@@ -6,7 +6,7 @@ from .models import Films, Suscriber, Gender, Likes, Classification
 
 class FilmsForm(forms.ModelForm):
     class Meta:
-        model= Classification
+        model= Films
         fields='__all__'
         widgets = {
             'name' : forms.TextInput(attrs={'class':'form__input'}),
@@ -18,7 +18,7 @@ class FilmsForm(forms.ModelForm):
 class ClassificationForm(forms.ModelForm):
     
     class Meta:
-        model=Films
+        model=Classification
         fields= '__all__'
         widgets = {
              'atp' : forms.TextInput(attrs={'class':'form__input'}),

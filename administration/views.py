@@ -9,20 +9,22 @@ from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
-def film_admin(request):
-    film=Films.objects.all()
-    return render(request, 'administration/index_admin.html',{'film':film})
-
-
-
 def create_films(request):
-    form = FilmsForm()
-    if request.method == 'POST':
-        form = FilmsForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('films_list')
-    return render(request, 'create_films.html', {'form': form})
+    form = FilmsForm()  # Crea una instancia del formulario FilmsForm
+
+    context = {
+        'form': form,  # Agrega el formulario al contexto
+    }
+
+    return render(request, 'administration/index_admin.html', context)
+
+
+
+
+
+
+
+
 
 
 
