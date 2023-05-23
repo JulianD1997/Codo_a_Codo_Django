@@ -1,0 +1,36 @@
+@import url(../variables.css);
+
+.catalogue_section{
+    width: 100%;
+    height: max-content;
+    margin-top: 60px;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-areas:
+        "aside article article"
+        "aside article article"
+        "aside article article";
+}
+
+.genres__list{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.container__link{
+    width: max-content;
+    height: max-content;
+}
+.list__movies{
+    grid-area: article;
+    
+}
+.link__genre{
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);    
+}
+.link__genre:hover{
+    
+}

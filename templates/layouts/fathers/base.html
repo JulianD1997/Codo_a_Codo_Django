@@ -19,17 +19,8 @@
     <header class='header'>
         {% include 'layouts/partials/nav.html' %}
     </header>
+            
     <main class='main'>
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert" role="alert">
-                <div class="alert__container">
-                    <span class="alert__message">{{message}}</span>
-                    <span class='alert__close' >&times;</span> 
-                </div>
-                </div>
-            {% endfor %}
-        {% endif %}
         {% comment %} contenido de la pagina {% endcomment %}
         {% block 'content' %}
         {% endblock %}

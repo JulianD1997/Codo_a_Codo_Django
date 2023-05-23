@@ -1,13 +1,19 @@
 {% extends 'layouts/fathers/base.html' %} 
 
-{% block 'title' %}Inicio{% endblock %} 
+{% block 'title' %}Peliculas{% endblock %} 
 
 {% block 'styles' %} 
     {% load static%}
+    <link rel="stylesheet" href="{% static 'css/catalogue/catalogue_style.css' %}" />
 {% endblock %}  
-
+    
 {% block 'content' %}
-    {% include 'layouts/partials/movie/catalogue_movie.html' %}
+    <section class='catalogue_section'>
+        {% include 'layouts/partials/movie/catalogue_movie.html' %}
+        <article class='list__movies'>
+
+        </article>
+    </section>
 {% endblock %} 
 {% block 'scripts' %}
 
