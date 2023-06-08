@@ -17,7 +17,7 @@ def tmdb_api(resource: str = "discover", type_: str = "movie", params: dict = {}
     API_KEY = config("API_KEY")
     params["api_key"] = API_KEY
     params.setdefault("language", "es-MX")
-    params = dict(sorted(params.items(), key=lambda x: x[1]))
+    """ params = dict(sorted(params.items(), key=lambda x: x[1])) """
     response = requests.get(STATIC_URL, params=params)
     response.raise_for_status()
     # print(response.url)
