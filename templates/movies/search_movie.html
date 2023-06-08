@@ -4,10 +4,13 @@
 
 {% block 'styles' %} 
     {% load static%}
+    <link rel="stylesheet" href="{% static 'css/catalogue/catalogue_style.css' %}" />
 {% endblock %}  
 
 {% block 'content' %}
+<section class='catalogue_section'>
     {% include 'layouts/partials/movie/catalogue_movie.html' %}
+</section>
 {% endblock %} 
 {% block 'scripts' %}
 

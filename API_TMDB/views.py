@@ -75,7 +75,7 @@ def movies_json(request):
                 params=params
             )
             movies = [
-                Movie(movie).to_dict() for movie in movies_request.json()['results'][:10]
+                Movie(movie).to_dict() for movie in movies_request.json()['results']
             ]
             return JsonResponse(movies, safe=False)
 

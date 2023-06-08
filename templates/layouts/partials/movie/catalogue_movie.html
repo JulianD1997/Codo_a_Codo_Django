@@ -1,10 +1,25 @@
-<aside>
+<aside class='genres__list'>
     {% for genre in genres %}
-        <div>
-            <a href="">{{ genre.name }}</a>
+        <div class='container__link'>
+            <a class="link__genre" href="">{{ genre.name }}</a>
         </div>
     {% endfor %}
 </aside>
-<section>
+<article class='list__movies'>
     
-</section>
+    {% for movie in movies  %}
+        <div class="card">
+            <img class="card__img" src="{{ movie.poster }}" alt="{{ movie.title }}">
+            <a class='heart__like' href=""><i class="fa-solid fa-heart"></i></a>
+            <div class="card__container">
+                <h4 class="card__title">{{ movie.title }}</h4>
+            </div>
+        </div>
+    {% endfor %}
+</article>
+<div class="buttons__class">
+    <a href="" class="section__button"><span class="span izquierda">Anterior</span><i
+        class="fa-solid fa-circle-chevron-left"></i></a>
+    <a href="" class="section__button"><span class="span derecha">Siguiente</span><i
+            class="fa-solid fa-circle-chevron-right"></i></a>
+</div>

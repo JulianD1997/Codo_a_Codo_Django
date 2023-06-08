@@ -10,6 +10,6 @@ def index(request):
     Renderiza la página principal con una lista de películas.
     """
     movies = movies_json(request).content.decode("utf-8")
-    context = {"movies": json.loads(movies)}
+    context = {"movies": json.loads(movies)[:10]}
 
     return render(request, "index.html", context)
