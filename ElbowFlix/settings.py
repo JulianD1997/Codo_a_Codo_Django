@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'API_TMDB',
     'users',
     'cinema',
-    'administration',
 ]
 
 MIDDLEWARE = [
