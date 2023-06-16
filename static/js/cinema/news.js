@@ -30,16 +30,26 @@ const renderNewMovies = async (page) => {
         const {id, title, poster_path, vote_average} = movie;
         const titleImage = 'https://image.tmdb.org/t/p/w500' + poster_path;
         const urlMoreInfo = `../movie.html?id=${id}`
-        html += `
-            <div class="col-3 col-custom">
-                <a href="${urlMoreInfo}" class="card custom-card">
-                    <img src="${titleImage}" class="card-img-top" alt="${title}">
-                    <div class="card-body">
-                        <h5 class="card-title text-center m-0">${title}</h5>
-                    </div>
-                </a>
+
+        html += `<div class="col-3 col-custom">
+            <a href="${urlMoreInfo}" class="card custom-card">
+                <img src="${titleImage}" class="card-img-top" alt="${title}">
+                <div class="card-body">
+                <p class="card-title text-center m-0">${title}</p>
+                </div>
+            </a>
             </div>
-        `
+     
+ `
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
     });
     document.getElementsByClassName('list-cards')[0].innerHTML = html;

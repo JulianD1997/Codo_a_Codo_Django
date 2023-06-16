@@ -6,20 +6,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nuevos | Elbowflix</title>
+    <link rel="manifest" href="img/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="static/css/cinema/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/cinema/news.css">
+    <link rel="stylesheet" href="static/css/nav_style.css"> 
 </head>
+
 <body id="news">
 
-    <div class="container my-5">
-        <h1 class="text-center mb-5">Últimos Estrenos</h1>
-        <div class="row list-cards">
+    <header id="nav" class='header'>
+        {% include 'layouts/partials/nav.html' %}
+    </header>
+    
+
+    <div id="contenedor" class="container my-5">
+        <h1 id="titulo" class="text-center mb-5">Últimos Estrenos</h1>
+        <div id="car"  class="row list-cards">
         </div>
         <nav aria-label="navigation" class="navigation mt-5"></nav>
-
     </div>
 
 

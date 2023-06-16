@@ -1,6 +1,15 @@
 #home #carousel-news-movies{
     height: 60vh;
 }
+#carousel-news-movies{
+    margin-top: 40px;
+    transform: translateY(60px);
+}
+#nav{
+    transform: translateY(0px);
+    height: 5px;
+    padding-top: 0px;
+}
 
 #home .list-new-movies{
     height: 100%;
@@ -14,6 +23,10 @@
 #home .carousel-caption{
     background-color: rgba(0,0,0,0.5);
     padding: 10px 20px;
+}
+#titulo{
+    margin-top: 20px;
+    transform: translateY(20px);
 }
 #home .now-playing h2,
 #home .top-rated h2{
@@ -42,10 +55,10 @@
 
 #home .now-playing__list .imagen-home,
 #home .top-rated-playing__list .imagen-home{
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width:100px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;

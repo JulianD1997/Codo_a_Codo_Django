@@ -6,19 +6,24 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search | Elbowflix</title>
+    <link rel="manifest" href="img/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="static/css/cinema/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/cinema/search.css">
+    <link rel="stylesheet" href="static/css/nav_style.css"> 
 </head>
 <body id="search">
+    
+    <header id="naveg" class='header'>
+        {% include 'layouts/partials/nav.html' %}
+    </header>
 
-    <div class="container my-5 caption">
-        <h1 class="text-center m-4">Buscador de películas</h1>
+    <div id="container" class="container my-5 caption">
+        <h1 id="title" class="text-center m-4">Buscador de películas</h1id=class=>
         <input type="text" id="search-movie" class="form-control" placeholder="Busca una película" onkeyup="searchMovies()">
-        <div class="row list-cards">
-
+        <div id="card" class="row list-cards">
         </div>
     </div>
 

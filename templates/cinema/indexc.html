@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
+    
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Elbowflix</title>
@@ -12,16 +13,21 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="static/css/cinema/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/cinema/index.css">
-</head>
+    <link rel="stylesheet" href="static/css/nav_style.css"> 
+    </head>
+
 <body id="home">
 
-     <div id="carousel-news-movies" class="carousel slide" data-ride="carousel">
+    <header id="nav" class='header'>
+        {% include 'layouts/partials/nav.html' %}
+    </header>
+    
+    <div id="carousel-news-movies" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner list-new-movies">
-
         </div>
     </div>
 
-    <div class="container mb-5">
+    <div id="titulo" class="container mb-5">
         <div class="row">
             <div class="col-12 col-lg-6 now-playing">
                 <h2>Películas Populares</h2>

@@ -52,7 +52,7 @@ const renderMoviesHome = async (url, clase) =>{
         const {id, title, poster_path } = movie;
         const titleImage = 'https://image.tmdb.org/t/p/w500' + poster_path;
         const urlMovie = `../movie.html?id=${id}`
-        if(index < 5){
+        if(index<20){
             html += `
                 <li class="list-group-item">
                     <div class="imagen-home"><img src="${titleImage}" alt="${title}"></div>

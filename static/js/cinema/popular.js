@@ -35,7 +35,7 @@ const renderPopularMovies = async (page) => {
                 <a href="${urlMoreInfo}" class="card custom-card">
                     <img src="${titleImage}" class="card-img-top" alt="${title}">
                     <div class="card-body">
-                        <h5 class="card-title text-center m-0">${title}</h5>
+                        <p class="card-title text-center m-0">${title}</p>
                     </div>
                 </a>
             </div>

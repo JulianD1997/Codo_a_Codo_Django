@@ -6,20 +6,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Polular | Elbowflix</title>
+    <link rel="manifest" href="img/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="static/css/cinema/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/cinema/popular.css">
+    <link rel="stylesheet" href="static/css/nav_style.css">
+
 </head>
+
 <body id="popular">
 
-    <div class="container my-5">
-        <h1 class="text-center mb-5">Películas Populares</h1>
-        <div class="row list-cards">
+    <header id="nav1" class='header'>
+        {% include 'layouts/partials/nav.html' %}
+    </header>
+
+    <div id="contenedor1" class="container my-5">
+        <h1 id="titulo1" class="text-center mb-5">Películas Populares</h1>
+        <div id="car1" class="row list-cards">
         </div>
         <nav aria-label="navigation" class="navigation mt-5"></nav>
-
     </div>
 
     <script src="static/js/cinema/jquery-3.5.1.min.js"></script>

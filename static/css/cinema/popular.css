@@ -1,3 +1,29 @@
+#nav1{
+    transform: translateY(0px);
+    height: 5px;
+    padding-top: 0px;
+}
+
+#titulo1{
+    margin-top: 120px;
+   
+}
+.card-body{
+    font-size: 0px;
+    padding-top: 0px;
+    transform: translateY(0px);
+    margin-top: -20px;
+    -ms-transform-origin-y: 0px;
+}
+
+p{
+    font-size: 0px;
+}
+
+#contenedor1{
+    margin-top: -15px;
+    }
+
 #popular .custom-card{
     border-radius: 15px;
     overflow: hidden;
@@ -5,7 +31,7 @@
     box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
     color: #000;
     transition: .5s all ease;
-
+    
 }
 #popular .custom-card img{
     opacity: 0.5;
@@ -19,6 +45,7 @@
     transform: scale(1.03);
     box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
     text-decoration: none;
+    
 }
 #popular .col-custom{
     padding: 15px;

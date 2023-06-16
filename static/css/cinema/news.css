@@ -1,12 +1,38 @@
-#news .custom-card{
-    border-radius: 15px;
+#nav{
+    transform: translateY(0px);
+    height: 5px;
+    padding-top: 0px;
+}
+
+#titulo{
+    margin-top: 120px;
+   
+}
+.card-body{
+    font-size: 0px;
+    padding-top: 0px;
+    transform: translateY(0px);
+    margin-top: -20px;
+    -ms-transform-origin-y: 0px;
+}
+
+p{
+    font-size: 0px;
+}
+
+#contenedor{
+    margin-top: -15px;
+    }
+
+#car{
+    border-radius: 40px;
     overflow: hidden;
     border: 0;
     box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
     color: #000;
     transition: .5s all ease;
-
 }
+
 #news .custom-card img{
     opacity: 0.5;
     transition: 0.5s alla ease;
@@ -20,8 +46,9 @@
     box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
     text-decoration: none;
 }
+
 #news .col-custom{
-    padding: 15px;
+    padding: 25px;
 }
 #news .footer-copyright{
     background: #505f93;

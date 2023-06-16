@@ -26,7 +26,7 @@ const searchMovies = async () => {
                         <div class="col-md-8 card-card-text">
                             <div class="card-body">
                                 <h5 class="card-title">${title.substr(0,30)}...</h5>
-                                <p class="card-text">${overview.substr(0,35)}...</p>
+                                <h5 class="card-text">${overview.substr(0,35)}...</h5>
                                 <a href="${urlMoreInfo}" class="btn btn-outline-primary btn-sm">Ver Más</a>
                             </div>
                         </div>
