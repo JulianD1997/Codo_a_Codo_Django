@@ -1,7 +1,11 @@
 <aside class='genres__list'>
+    <h5>Generos</h5>
+    <div class='container__link'>
+        <a class="link__genre" href="{% url 'page' %}">Todas</a>
+    </div>
     {% for genre in genres %}
         <div class='container__link'>
-            <a class="link__genre" href="">{{ genre.name }}</a>
+            <a class="link__genre" href="{% url 'page_genre' genre.id %}">{{ genre.name }}</a>
         </div>
     {% endfor %}
 </aside>
@@ -10,7 +14,7 @@
     {% for movie in movies  %}
         <div class="card">
             <img class="card__img" src="{{ movie.poster }}" alt="{{ movie.title }}">
-            <a class='heart__like' href=""><i class="fa-solid fa-heart"></i></a>
+            <a class='heart__like' href="{% url 'like_movie' %}?movie_id={{movie.id}}"><i class="fa-solid fa-heart"></i></a>
             <div class="card__container">
                 <h4 class="card__title">{{ movie.title }}</h4>
             </div>
@@ -18,8 +22,8 @@
     {% endfor %}
 </article>
 <div class="buttons__class">
-    <a href="" class="section__button"><span class="span izquierda">Anterior</span><i
+    <a href="{% url 'page' %}?pag=prev&genre={{gen}}" class="section__button"><span class="span izquierda">Anterior</span><i
         class="fa-solid fa-circle-chevron-left"></i></a>
-    <a href="" class="section__button"><span class="span derecha">Siguiente</span><i
+    <a href="{% url 'page' %}?pag=next&genre={{gen}}" class="section__button"><span class="span derecha">Siguiente</span><i
             class="fa-solid fa-circle-chevron-right"></i></a>
 </div>

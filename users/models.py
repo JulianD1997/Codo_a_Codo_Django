@@ -63,3 +63,4 @@ class User(AbstractBaseUser):
         self.name = self.name.capitalize()
         self.last_name = self.last_name.capitalize()
         super().save(*args, **kwargs)
+        
