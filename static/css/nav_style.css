@@ -1,6 +1,6 @@
 @import url(variables.css);
 /* Styles nav */
-.nav {
+.nav_ {
   position: fixed;
   z-index: 100;
   width: 100%;

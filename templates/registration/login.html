@@ -8,7 +8,6 @@
     <section class="section login">
         <article class='article'>
             <h2 class="title">Iniciar sesión</h2>
-            <div class="section__poster"></div>
             <form class="form__login" method="post" autocomplete="off">
                 {% csrf_token %}
                 <div class="form__group">
@@ -27,7 +26,10 @@
                 </div>
                 <button class="form__input button" type="submit">Iniciar sesión</button>
             </form>
-            <a class='link__register' href="{% url 'register' %}">registrarse</a>
+            <div class="links_group">
+                <a class='link' href="{% url 'register' %}">registrarse</a>
+                <a class='link' href="{% url 'password_reset' %}">Olvidaste ru contraseña</a>
+            </div>
         </article>
     </section>
 {% endblock %} 
