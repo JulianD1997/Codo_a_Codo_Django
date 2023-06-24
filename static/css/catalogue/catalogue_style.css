@@ -25,12 +25,17 @@
     width: max-content;
     height: max-content;
 }
-.list__movies{
+.cinema{
     grid-area: article;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list__movies{
+
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
-
 }
 .card {
     position: relative;
@@ -125,4 +130,50 @@
 }
 .section__button > .fa-circle-chevron-left{
     left: 15%;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+}
+
+.searchTerm {
+  border: 3px solid white;
+  border-right: none;
+  width: 90%;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: black;
+  padding: 0 5px;
+  font-size: 0.8rem;
+}
+
+.searchTerm:focus{
+  color: #000000;
+  font-size: 0.8rem;
+}
+
+.searchButton {
+  width: 40px;
+  height: 100%;
+  border: 1px solid #00B4CC;
+  background: var(--tertiary-color);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    width: 60%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }

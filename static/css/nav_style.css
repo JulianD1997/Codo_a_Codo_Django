@@ -1,6 +1,6 @@
 @import url(variables.css);
-/* Styles nav */
-.nav_ {
+/* Styles _nav */
+._nav {
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -11,7 +11,7 @@
   background-color: var(--primary-color);
 }
 
-.nav__logo {
+._nav__logo {
   color: var(--text-color);
   font-size: 2rem;
   font-weight: bold;
@@ -33,7 +33,7 @@
   }
 }
 
-.nav__menu {
+._nav__menu {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -46,11 +46,11 @@
   transition: left 0.5s;
 }
 
-.nav__item {
+._nav__item {
   margin-bottom: 1rem;
 }
 
-.nav__link {
+._nav__link {
   font-size: 1.5rem;
   color: var(--text-color);
   display: flex;
@@ -61,16 +61,16 @@
   transition: color 0.3s ease-out, transform 0.3s ease-out;
 }
 
-.nav__link>span {
+._nav__link>span {
   transition: text-decoration 0.3s ease-out;
 }
 
-.nav__link:hover {
+._nav__link:hover {
   color: var(--hover-text-color);
   transform: scale(1.2);
 }
 
-.nav__link:hover>span {
+._nav__link:hover>span {
   text-decoration: underline;
 }
 
@@ -211,14 +211,14 @@
   }
 }
 
-.nav__menu.active {
+._nav__menu.active {
   left: 0;
 }
 
 @media only screen and (min-width: 950px) {
 
-  /* Styles nav */
-  .nav__menu {
+  /* Styles _nav */
+  ._nav__menu {
     padding: 0 0.5rem;
     position: relative;
     top: 0;
@@ -229,16 +229,16 @@
     gap: 1.5rem;
     background-color: transparent;
   }
-  .nav__item{
+  ._nav__item{
     margin: 0;
   }
-  .nav__link {
+  ._nav__link {
     color: var(--text-color);
     cursor: pointer;
     transition: color 0.3s ease-out;
   }
 
-  .nav__link:hover {
+  ._nav__link:hover {
     color: var(--hover-text-color);
   }
 

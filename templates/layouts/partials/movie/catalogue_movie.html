@@ -9,17 +9,26 @@
         </div>
     {% endfor %}
 </aside>
-<article class='list__movies'>
-    
-    {% for movie in movies  %}
-        <div class="card">
-            <img class="card__img" src="{{ movie.poster }}" alt="{{ movie.title }}">
-            <a class='heart__like' href="{% url 'like_movie' %}?movie_id={{movie.id}}"><i class="fa-solid fa-heart"></i></a>
-            <div class="card__container">
-                <h4 class="card__title">{{ movie.title }}</h4>
-            </div>
+<article class='cinema'>
+    <div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="What are you looking for?">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
         </div>
-    {% endfor %}
+     </div>
+    <div class='list__movies'>
+        {% for movie in movies  %}
+            <div class="card">
+                <img class="card__img" src="{{ movie.poster }}" alt="{{ movie.title }}">
+                <a class='heart__like' href="{% url 'like_movie' %}?movie_id={{movie.id}}"><i class="fa-solid fa-heart"></i></a>
+                <div class="card__container">
+                    <h4 class="card__title">{{ movie.title }}</h4>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </article>
 <div class="buttons__class">
     <a href="{% url 'page' %}?pag=prev&genre={{gen}}" class="section__button"><span class="span izquierda">Anterior</span><i
